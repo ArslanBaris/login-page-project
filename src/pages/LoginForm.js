@@ -9,10 +9,13 @@ export default class LoginForm extends Component {
             <View>
                 <Text style={styles.signInText}>Sign In</Text>
                 <Input
+                    returnKeyType={"next"}
                     autoCapitalize="none"
-                    placeholder="Username" />
+                    placeholder="Username"
+                    onSubmitEditing={() => { this.passwordInput.focus() }} />
 
                 <Input
+                    inputRef={input => { this.passwordInput = input; }}
                     secureTextEntry={true}
                     placeholder="Password" />
             </View>

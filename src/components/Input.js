@@ -8,6 +8,7 @@ export const Input = (props) => {
 		<View>
 			<TextInput
 				{...props}
+				ref={props.inputRef}
 				placeholderTextColor="#ddd"
 				style={styles.input}
 				value={text}
