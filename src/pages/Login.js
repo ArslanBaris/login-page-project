@@ -4,7 +4,8 @@ import {
     StyleSheet,
     Text,
     View,
-    KeyboardAvoidingView
+    KeyboardAvoidingView,
+    TouchableOpacity
 } from 'react-native';
 import LoginForm from './LoginForm';
 
@@ -27,6 +28,12 @@ function Login() {
                         <LoginForm />
                     </View>
                 </ScrollView>
+                <View style={styles.signUpArea}>
+                    <Text style={styles.signUpDescription}>Don't have an account?</Text>
+                    <TouchableOpacity>
+                        <Text style={styles.signUpText}>Sign Up</Text>
+                    </TouchableOpacity>
+                </View>
             </KeyboardAvoidingView>
         </View>
     );
@@ -78,6 +85,14 @@ const styles = StyleSheet.create({
         color: '#7e868f',
         marginVertical: 10,
         textAlign: 'center'
+    }, signUpArea: {
+        alignItems: 'center'
+    },
+    signUpDescription: {
+        color: '#999'
+    },
+    signUpText: {
+        color: '#666'
     }
 });
 
